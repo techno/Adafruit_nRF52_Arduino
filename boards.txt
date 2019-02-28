@@ -201,3 +201,43 @@ pca10056.menu.debug.l2=Level 2 (Full Debug)
 pca10056.menu.debug.l2.build.debug_flags=-DCFG_DEBUG=2
 pca10056.menu.debug.l3=Level 3 (Segger SystemView)
 pca10056.menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3
+
+# ----------------------------------
+# Puck.JS Board
+# ----------------------------------
+puckjs.name=Puck.js
+puckjs.bootloader.tool=bootburn
+
+# Upload
+puckjs.upload.tool=nrfutil
+puckjs.upload.protocol=nrfutil
+puckjs.upload.use_1200bps_touch=false
+puckjs.upload.wait_for_upload_port=false
+puckjs.upload.native_usb=false
+puckjs.upload.maximum_size=290816
+puckjs.upload.maximum_data_size=51072
+
+# Build
+puckjs.build.mcu=cortex-m4
+puckjs.build.f_cpu=64000000
+puckjs.build.board=NRF52_PUCKJS
+puckjs.build.core=nRF5
+puckjs.build.variant=puckjs
+puckjs.build.extra_flags=-DNRF52832_XXAA -DNRF52 -DARDUINO_NRF52_FEATHER
+puckjs.build.ldscript=nrf52832_s132_v6.ld
+
+# SofDevice Menu
+puckjs.menu.softdevice.s132v6=0.2.11 SoftDevice s132 6.1.1
+puckjs.menu.softdevice.s132v6.build.sd_name=s132
+puckjs.menu.softdevice.s132v6.build.sd_version=6.1.1
+puckjs.menu.softdevice.s132v6.build.sd_fwid=0x00B7
+
+# Debug Menu
+puckjs.menu.debug.l0=Level 0 (Release)
+puckjs.menu.debug.l0.build.debug_flags=-DCFG_DEBUG=0
+puckjs.menu.debug.l1=Level 1 (Error Message)
+puckjs.menu.debug.l1.build.debug_flags=-DCFG_DEBUG=1
+puckjs.menu.debug.l2=Level 2 (Full Debug)
+puckjs.menu.debug.l2.build.debug_flags=-DCFG_DEBUG=2
+puckjs.menu.debug.l3=Level 3 (Segger SystemView)
+puckjs.menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3
